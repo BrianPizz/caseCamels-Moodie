@@ -32,11 +32,36 @@
 
 .hidden {
     display: none;
-} 
+}
 
+
+/*genre page styles*/
+.prompt-1 button {
+    background-color: orange;
+    font-size: 25px;
+    padding: 5px;
+    border-radius: 15px;
+    width: 350px;
+    font-weight:bolder
+}
+.prompt-1 button:hover {
+    box-shadow: inset 0px 0px 25px orange, 0 0 25px orange;
+}
+.prompt-1 button:active {
+    background-color: bisque;
+}
+.prompt-1 {
+    position: relative;
+    font-size: 50px;
+    text-align: center;
+}
+.prompt-1 h1 {
+    font-weight: bolder;
+}
 
 /*era page styles*/
 .hide {
+    display: none;
      display: none;
   }
 .prompt-era {
