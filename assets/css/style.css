@@ -1,3 +1,4 @@
+/*starter page styles*/
 .page {
     color: white;
     background-image: url('https://c4.wallpaperflare.com/wallpaper/307/12/896/simple-background-black-background-minimalism-theater-photography-hd-wallpaper-preview.jpg');
@@ -6,14 +7,17 @@
     height: 100vh;
 }
 
-.subtitle, .title {
+.subtitle {
+    color:white;
+}
+.title {
     color: orange;
 }
 
 #start {
     background-color: orange;
     font-size: 20px;
-    font-weight: bolder;
+    font-weight: 900;
     border-radius: 10px;
     width: 130px;
 }
@@ -40,4 +44,31 @@
     display: flex;
     justify-content: center;
     align-items: center;
+.hidden {
+    display: none;
+}
+
+
+/*genre page styles*/
+.prompt-1 button {
+    background-color: orange;
+    font-size: 25px;
+    padding: 5px;
+    border-radius: 15px;
+    width: 350px;
+    font-weight:bolder
+}
+.prompt-1 button:hover {
+    box-shadow: inset 0px 0px 25px orange, 0 0 25px orange;
+}
+.prompt-1 button:active {
+    background-color: bisque;
+}
+.prompt-1 {
+    position: relative;
+    font-size: 50px;
+    text-align: center;
+}
+.prompt-1 h1 {
+    font-weight: bolder;
 }
