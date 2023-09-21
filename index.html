@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./assets/css/style.css"/>
 </head>
 
-<body class="page">
+<!-- <body class="page">
     <nav class="level">
         <h1 class="level-item is-size-1 title mt-3">Moodie</h1>
     </nav>
@@ -20,6 +20,40 @@
                 <button class="button" id="start">Start</button>
             </div>
         </div>
+    </section> -->
+
+    <section class="prompt-era">
+        <div id="question-container" class="hide">
+            <div id="era-question" class="is-size-3 subtitle">What era would you like the movie to be from?</div>
+            <div class="dropdown is-hoverable">
+                <div class="dropdown-trigger">
+                  <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+                    <span>Select era</span>
+                    <span class="icon is-small">
+                      <i class="fas fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                  </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                  <div class="dropdown-content">
+                    <div class="dropdown-item">
+                      <p>1950-1970</p>
+                    </div>
+                    <div class="dropdown-item">
+                        <p>1970-1990</p>
+                      </div>
+                      <div class="dropdown-item">
+                        <p>1990-2010</p>
+                      </div>
+                      <div class="dropdown-item">
+                        <p>2010-2023</p>
+                      </div>
+                  </div>
+                </div>
+                <button class="button">Button</button>
+              </div>
+        </div>
+
     </section>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"

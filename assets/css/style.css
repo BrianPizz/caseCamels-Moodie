@@ -25,3 +25,19 @@
 .custom-column {
     margin-top: 17%;
 }
+
+.hide {
+    /* display: none; */
+  }
+
+.button {
+    margin: auto;
+    
+}
+
+.prompt-era {
+    margin-top: 17%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
