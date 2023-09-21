@@ -34,6 +34,7 @@
     display: none;
 }
 
+
 /*genre page styles*/
 .prompt-1 button {
     background-color: orange;
@@ -61,6 +62,7 @@
 /*era page styles*/
 .hide {
     display: none;
+     display: none;
   }
 .prompt-era {
     margin-top: 15%;
