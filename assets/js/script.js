@@ -72,15 +72,13 @@ var baseUrl = "https:/theapi.com/search?";
 // when genre is pressed then genre variable is assigned value
 // if any button gets pressed in genre, addeventlistener (add on all buttons on prompt 1) button that is pressed = value of genre
 
-
-function promptOnePage() {
-    starterPage.setAttribute('class', 'hidden')
-    genrePage.removeAttribute('class')
+function startSearch() {
+    startPageEl.addClass('hidden')
+    genrePageEl.removeClass('hidden')
 }
 
-
-//addeventlistener to start button on starter page to show prompt 1
-startButton.onclick = promptOnePage
+// Event Listeners
+startBtnEl.on('click', startSearch)
 
 //bulma carousel
 bulmaCarousel.attach('#slider', {
