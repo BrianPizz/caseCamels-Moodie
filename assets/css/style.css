@@ -30,14 +30,14 @@
     margin-top: 17%;
 }
 
-/* .hidden {
+.hidden {
     display: none;
-} */
+} 
 
 
 /*era page styles*/
 .hide {
-    /* display: none; */
+     display: none;
   }
 .prompt-era {
     margin-top: 15%;
