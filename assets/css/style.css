@@ -1,0 +1,27 @@
+.page {
+    color: white;
+    background-image: url('https://c4.wallpaperflare.com/wallpaper/307/12/896/simple-background-black-background-minimalism-theater-photography-hd-wallpaper-preview.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.subtitle, .title {
+    color: orange;
+}
+
+#start {
+    background-color: orange;
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius: 10px;
+    width: 130px;
+}
+
+#start:hover {
+    background-color: bisque;
+}
+
+.custom-column {
+    margin-top: 17%;
+}
