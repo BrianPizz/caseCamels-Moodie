@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moodie</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
     <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
     <body class="page">
@@ -99,26 +100,47 @@
             <section class="section">
                 <div class="container">
                     <div class="columns is-multiline is-centered">
-                        <div id="movie-section" class="column is-one-third">
+                        <div id="movie-section" class="column is-one-third is-clipped">
+                            <div id="slider">
 
-                            <div class="card mx-3">
-                                <div class="card-image">
-                                    <figure class="image">
-                                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="">
-                                    </figure>
+                                <div class="card mx-3">
+                                    <div class="card-image">
+                                        <figure class="image">
+                                            <img src="https://bulma.io/images/placeholders/1280x960.png" alt="">
+                                        </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <h2 class="is-size-2">Title</h2>
+                                        <p class="mb-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus accusamus,
+                                            quaerat repellat eius fugit vero beatae ea. Magni dolor libero ea fuga eligendi,
+                                            error minus neque inventore fugit, debitis repellat!
+                                        </p>
+                                        <a href="#" class="button">Netflix</a>
+                                        <a href="#" class="button">Hulu</a>
+                                        <a href="#" class="button">Prime</a>
+                                    </div>
                                 </div>
-                                <div class="card-content">
-                                    <h2 class="is-size-2">Title</h2>
-                                    <p class="mb-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus accusamus,
-                                        quaerat repellat eius fugit vero beatae ea. Magni dolor libero ea fuga eligendi,
-                                        error minus neque inventore fugit, debitis repellat!
-                                    </p>
-                                    <a href="#" class="button">Netflix</a>
-                                    <a href="#" class="button">Hulu</a>
-                                    <a href="#" class="button">Prime</a>
+
+                                <div class="card mx-3">
+                                    <div class="card-image">
+                                        <figure class="image">
+                                            <img src="https://bulma.io/images/placeholders/1280x960.png" alt="">
+                                        </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <h2 class="is-size-2">Title</h2>
+                                        <p class="mb-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus accusamus,
+                                            quaerat repellat eius fugit vero beatae ea. Magni dolor libero ea fuga eligendi,
+                                            error minus neque inventore fugit, debitis repellat!
+                                        </p>
+                                        <a href="#" class="button">Netflix</a>
+                                        <a href="#" class="button">Hulu</a>
+                                        <a href="#" class="button">Prime</a>
+                                    </div>
                                 </div>
+
+
                             </div>
-
                         </div>
                         <div class="column is-narrow"></div>
                         <div class="column is-narrow"></div>
@@ -148,6 +170,7 @@
 
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"
             integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
         <script src="./assets/js/script.js"></script>
     </body>
 
