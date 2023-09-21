@@ -45,11 +45,10 @@ var hungarian = "list.recipe.search_based:fq:attribute_s_mv:(cuisine\^cuisine\-h
     // sort
     // page
 
-    var startYear = ""
-    var endYear = ""
-    var genre = ""
-    var language = ""
-    var sortList = ""
+    var era1 = "start_year=1970&end_year=1990"
+    var era2 = "start_year=1991&end_year=2010"
+    var era3 = "start_year=2011&end_year=2023"
+    
 
 
 
