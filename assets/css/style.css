@@ -30,24 +30,42 @@
     margin-top: 17%;
 }
 
+/* .hidden {
+    display: none;
+} */
+
+
+/*era page styles*/
 .hide {
     /* display: none; */
   }
-
-.button {
-    margin: auto;
-    
-}
-
 .prompt-era {
-    margin-top: 17%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-.hidden {
-    display: none;
+    margin-top: 15%;
+    position: relative;
+    font-size: 50px;
+    text-align: center;
 }
-
+.prompt-2 {
+    background-color: orange;
+    font-size: 25px;
+    padding: 5px;
+    border-radius: 15px;
+    width: 350px;
+    font-weight: bolder;
+}
+.dropdown-menu {
+    font-size: 25px;
+    width: 350px;
+}
+.dropdown-item {
+    border-style: solid;
+    border-radius: 15px;
+    background-color: orange;
+    font-size: 20px;
+    padding: 5px;
+    border-color: black;
+    color: black;
+}
 
 /*genre page styles*/
 .prompt-1 button {
@@ -58,10 +76,10 @@
     width: 350px;
     font-weight:bolder
 }
-.prompt-1 button:hover {
+.prompt-1 p:hover {
     box-shadow: inset 0px 0px 25px orange, 0 0 25px orange;
 }
-.prompt-1 button:active {
+.prompt-1 p:active {
     background-color: bisque;
 }
 .prompt-1 {
