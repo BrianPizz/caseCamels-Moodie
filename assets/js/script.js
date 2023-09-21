@@ -48,6 +48,15 @@ var hungarian = "list.recipe.search_based:fq:attribute_s_mv:(cuisine\^cuisine\-h
     var era1 = "start_year=1970&end_year=1990"
     var era2 = "start_year=1991&end_year=2010"
     var era3 = "start_year=2011&end_year=2023"
+
+    var baseUrl = "https:/theapi.com/search?"
+
+    var genre
+    var era
+
+    // if start button is pressed then hide start screen show prompt1
+    // when genre is pressed then genre variable is assigned value
+    // if any button gets pressed in genre, addeventlistener (add on all buttons on prompt 1) button that is pressed = value of genre
     
 
 
