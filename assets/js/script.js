@@ -74,11 +74,41 @@ $('.langBtn').on('click', function(){
     console.log(language);
     languagePageEl.addClass('hidden');
     resultPageEl.removeClass('hidden');
+
+    //movie API search
+    searchMovie();
 })
+
+function searchMovie(){
+    // add API fetch for movie
+
+
+
+
+}
+
+function printMovieResults(movie){
+    //add movie api call data to document
+
+
+
+    getDinner();
+}
+
+function getDinner(){
+// add API fetch for dinner
+
+
+}
+
+function printDinner(dinner){
+//add dinner api data to document
+
+
+}
 
 // Event Listeners
 startBtnEl.on('click', startSearch)
-
 
 // intial load
 function initLoad(){
