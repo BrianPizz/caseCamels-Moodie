@@ -87,7 +87,8 @@ function searchMovie(){
             'X-RapidAPI-Key': '8ebca9f28cmsh2d3b9f9a6282943p1d53a7jsnf53b2b807ce4',
             'X-RapidAPI-Host': 'ott-details.p.rapidapi.com'
         }
-    };
+    }; 
+    fetch(movieUrl, options)
 
 
 
