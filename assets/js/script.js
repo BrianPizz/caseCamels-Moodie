@@ -86,6 +86,20 @@ $('.genreBtn').on('click', function(){
     yearPageEl.removeClass('hidden');
 })
 
+// when an era button is clicked that era value is assigned to the era variable. Then the next prompt is shown
+$('.eraBtn').on('click', function(){
+    if ($(this).attr('id') === 'era-1'){
+        era = era1
+    } else if ($(this).attr('id') ==='era-2'){
+        era = era2
+    } else if ($(this).attr('id') ==='era-3'){
+        era = era3
+    }
+    console.log(era)
+    yearPageEl.addClass('hidden');
+    languagePageEl.removeClass('hidden');
+})
+
 // Event Listeners
 startBtnEl.on('click', startSearch)
 
