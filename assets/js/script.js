@@ -220,6 +220,10 @@ var dinnerLink = $('<a>').attr('href', dinner.display.source.sourceRecipeUrl);
 
 // Event Listeners
 startBtnEl.on('click', startSearch)
+//back button refreshes page
+$('#back-btn').on('click', function(){
+    location.reload();
+})
 
 // intial load
 function initLoad(){
