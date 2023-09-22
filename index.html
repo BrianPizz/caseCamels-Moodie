@@ -2,78 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Moodie</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
-<!-- <body class="page">
-    <nav class="level">
-        <h1 class="level-item is-size-1 title mt-3">Moodie</h1>
-    </nav>
-    <section class="section">
-        <div class="columns is-centered is-flex is-vcentered">
-            <div class="column is-half has-text-centered custom-column">
-                <p class="is-size-3 subtitle">Let us customize your night-in! Start for ideas</p>
-                <button class="button" id="start">Start</button>
-            </div>
-        </div>
-    </section> -->
-
-    <section class="prompt-era">
-        <div id="question-container" class="hide">
-            <div id="era-question" class="is-size-3 subtitle">What era would you like the movie to be from?</div>
-            <div class="dropdown is-hoverable">
-                <div class="dropdown-trigger">
-                  <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
-                    <span>Select era</span>
-                    <span class="icon is-small">
-                      <i class="fas fa-angle-down" aria-hidden="true"></i>
-                    </span>
-                  </button>
-                </div>
-                <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-                  <div class="dropdown-content">
-                    <div class="dropdown-item">
-                      <p>1950-1970</p>
-                    </div>
-                    <div class="dropdown-item">
-                        <p>1970-1990</p>
-                      </div>
-                      <div class="dropdown-item">
-                        <p>1990-2010</p>
-                      </div>
-                      <div class="dropdown-item">
-                        <p>2010-2023</p>
-                      </div>
-                  </div>
-                </div>
-                <button class="button">Button</button>
-              </div>
-        </div>
-
-    </section>
-
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-        <script src="./assets/js/script.js"></script>
-</body>
-
-</html>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moodie</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css"/>
-</head>
-
-<body class="page">
+<body>
     <div id="starter-page">
         <nav class="level">
             <h1 class="level-item is-size-1 title mt-3">Moodie</h1>
@@ -81,48 +18,186 @@
         <section class="section">
             <div class="columns is-centered is-flex is-vcentered">
                 <div class="column is-half has-text-centered custom-column">
-                    <p class="is-size-3 subtitle">Let us customize your night-in! Start for ideas</p>
+                    <p class="is-size-3 subtitle">
+                        Let us customize your night-in! Start for ideas
+                    </p>
                     <button class="button" id="start">Start</button>
                 </div>
             </div>
         </section>
     </div>
 
-    <div id="genre-page" class="hidden" >
+    <div id="genre-page" class="hidden">
         <section class="prompt-1">
-          <h1 class="title is-size-1">What are you in the mood for?</h1>
-          <button id="action">Action</button>
-          <button id="adult">Adult</button>
-          <button id="adventure">Adventure</button>
-          <button id="animation">Animation</button>
-          <button id="biography">Biography</button>
-          <button id="comedy">Comedy</button>
-          <button id="crime">Crime</button>
-          <button id="documentary">Documentary</button>
-          <button id="drama">Drama</button>
-          <button id="family">Family</button>
-          <button id="fantasy">Fantasy</button>
-          <button id="game-show">Game-Show</button>
-          <button id="history">History</button>
-          <button id="horror">Horror</button>
-          <button id="music">Music</button>
-          <button id="mystery">Mystery</button>
-          <button id="news">News</button>
-          <button id="reality-tv">Reality-TV</button>
-          <button id="romance">Romance</button>
-          <button id="sci-fi">Sci-Fi</button>
-          <button id="short">Short</button>
-          <button id="sport">Sport</button>
-          <button id="talk-show">Talk-Show</button>
-          <button id="thriller">Thriller</button>
-          <button id="war">War</button>
-          <button id="western">Western</button>
+            <h1 class="title is-size-1">What are you in the mood for?</h1>
+            <button class="genreBtn" id="adult">Adult</button>
+            <button class="genreBtn" id="adventure">Adventure</button>
+            <button class="genreBtn" id="animation">Animation</button>
+            <button class="genreBtn" id="action">Action</button>
+            <button class="genreBtn" id="biography">Biography</button>
+            <button class="genreBtn" id="comedy">Comedy</button>
+            <button class="genreBtn" id="crime">Crime</button>
+            <button class="genreBtn" id="documentary">Documentary</button>
+            <button class="genreBtn" id="drama">Drama</button>
+            <button class="genreBtn" id="family">Family</button>
+            <button class="genreBtn" id="fantasy">Fantasy</button>
+            <button class="genreBtn" id="history">History</button>
+            <button class="genreBtn" id="horror">Horror</button>
+            <button class="genreBtn" id="music">Music</button>
+            <button class="genreBtn" id="mystery">Mystery</button>
+            <button class="genreBtn" id="romance">Romance</button>
+            <button class="genreBtn" id="sci-fi">Sci-Fi</button>
+            <button class="genreBtn" id="short">Short</button>
+            <button class="genreBtn" id="sport">Sport</button>
+            <button class="genreBtn" id="thriller">Thriller</button>
+            <button class="genreBtn" id="war">War</button>
+            <button class="genreBtn" id="western">Western</button>
         </section>
-      </div>
+    </div>
+
+    <div id="year-page" class="prompt-era hidden" >
+        <div id="question-container">
+            <div id="era-question" class="title is-size-1">
+                What era would you like the movie to be from?
+            </div>
+            <div class="dropdown is-hoverable">
+                <div class="dropdown-trigger">
+                    <button class="prompt-2" aria-haspopup="true" aria-controls="dropdown-menu4">
+                        <span>Select era</span>
+                        <span class="icon is-small">
+                            <i class="fas fa-angle-down" aria-hidden="true"></i>
+                        </span>
+                    </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                    <div class="dropdown-content">
+                        <button id="era-1" class="eraBtn button dropdown-item">
+                            1970-1990
+                        </button>
+                        <button id="era-2" class="eraBtn button dropdown-item">
+                            1990-2010
+                        </button>
+                        <button id="era-3" class="eraBtn button dropdown-item">
+                            2010-2023
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="language-page" class="hidden">
+        <section class="prompt-3">
+            <h1 class="title is-size-1">What language should the movie be in?</h1>
+            <div class="columns is-centered">
+            <div class="column is-half mt-6">
+            <button class="button langBtn" id="english">English</button>
+            <button class="button langBtn" id="mandarin">Mandarin</button>
+            <button class="button langBtn" id="french">French</button>
+            <button class="button langBtn" id="japanese">Japanese</button>
+            <button class="button langBtn" id="spanish">Spanish</button>
+            <button class="button langBtn" id="korean">Korean</button>
+            <button class="button langBtn" id="german">German</button>
+            <button class="button langBtn" id="hindi">Hindi</button>
+            <button class="button langBtn" id="italian">Italian</button>
+            <button class="button langBtn" id="arabic">Arabic</button>
+            <button class="button langBtn" id="hebrew">Hebrew</button>
+            <button class="button langBtn" id="cantonese">Cantonese</button>
+            <button class="button langBtn" id="portuguese">Portuguese</button>
+            <button class="button langBtn" id="swedish">Swedish</button>
+            <button class="button langBtn" id="latin">Latin</button>
+            <button class="button langBtn" id="ukranian">Ukrainian</button>
+            <button class="button langBtn" id="danish">Danish</button>
+            <button class="button langBtn" id="persian">Persian</button>
+        </div>
+    </div>
+        </section>
+    </div>
+
+
+    <div id="results-page">
+        <nav class="level">
+            <h1 class="level-item is-size-1 title mt-3">Moodie</h1>
+        </nav>
+        <section class="section">
+            <div class="container">
+                <div class="columns is-multiline is-centered">
+                    <div id="movie-section" class="column is-one-third is-clipped">
+                        
+
+                            <div class="card mx-3">
+                                <!-- <div class="card-image">
+                                    <figure class="image">
+                                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="">
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    <h2 class="is-size-2">Title</h2>
+                                    <p class="mb-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                        Voluptatibus accusamus,
+                                        quaerat repellat eius fugit vero beatae ea. Magni dolor libero ea fuga eligendi,
+                                        error minus neque inventore fugit, debitis repellat!
+                                    </p>
+                                    <a href="#" class="button">Netflix</a>
+                                    <a href="#" class="button">Hulu</a>
+                                    <a href="#" class="button">Prime</a>
+                                </div>
+                            </div>
+
+                            <div class="card mx-3">
+                                <div class="card-image">
+                                    <figure class="image">
+                                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="">
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    <h2 class="is-size-2">Title</h2>
+                                    <p class="mb-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                        Voluptatibus accusamus,
+                                        quaerat repellat eius fugit vero beatae ea. Magni dolor libero ea fuga eligendi,
+                                        error minus neque inventore fugit, debitis repellat!
+                                    </p>
+                                    <a href="#" class="button">Netflix</a>
+                                    <a href="#" class="button">Hulu</a>
+                                    <a href="#" class="button">Prime</a>
+                                </div> -->
+                            </div>
+
+
+            
+                    </div>
+                    <div class="column is-narrow"></div>
+                    <div class="column is-narrow"></div>
+                    <div class="column is-narrow"></div>
+                    <div id="dinner-section" class="column is-one-third">
+                        <a id="recipe-link" href="#">
+
+                            <div class="card mx-3">
+                                <div class="card-image">
+                                    <figure class="image">
+                                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="">
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    <h2 class="is-size-2">Dinner</h2>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus
+                                        accusamus, quaerat repellat eius fugit vero beatae ea. Magni dolor libero ea
+                                        fuga eligendi, error minus neque inventore fugit, debitis repellat!
+                                    </p>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-        <script src="./assets/js/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>    
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
