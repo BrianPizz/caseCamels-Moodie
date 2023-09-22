@@ -103,9 +103,28 @@ function getDinner(){
 
 function printDinner(dinner){
 //add dinner api data to document
-
-
+var dinnerLink = $('<a>').attr('href', dinner.display.source.sourceRecipeUrl);
+    var dinnerCard = $('<div>').addClass('card mx-3');
+    var dinnerImgSection = $('<div>').addClass('card-image');
+    dinnerCard.append(dinnerImgSection);
+    var dinnerImageContainer = $('<figure>').addClass('image is-4by3');
+    dinnerImgSection.append(dinnerImageContainer);
+    var dinnerImage = $('<img>');
+    dinnerImage.attr('src', dinner.display.images[0]);
+    dinnerImageContainer.append(dinnerImage);
+    var dinnerContent = $('<div>').addClass('card-content')
+    var dinnerName = $('<h2>').addClass('is-size-3').text(dinner.display.displayName);
+    dinnerContent.append(dinnerName);
+    if(dinner.content.description != null){
+        var dinnerDesc = $('<p>').text(dinner.content.description.text);
+        dinnerContent.append(dinnerDesc);
 }
+    dinnerCard.append(dinnerContent);
+    dinnerLink.append(dinnerCard);
+    dinnerSectionEl.append(dinnerLink)
+}
+
+
 
 // Event Listeners
 startBtnEl.on('click', startSearch)
