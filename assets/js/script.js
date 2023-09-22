@@ -14,6 +14,7 @@ var dinnerSectionEl = $('#recipe-link');
 //function variables
 var genre;
 var era;
+var language;
 var cuisine = "";
 var genre = "";
 
@@ -67,37 +68,39 @@ var era3 = "start_year=2011&end_year=2023";
 var baseUrl = "https:/theapi.com/search?";
 
 
-
-// if start button is pressed then hide start screen show prompt1
-// when genre is pressed then genre variable is assigned value
-// if any button gets pressed in genre, addeventlistener (add on all buttons on prompt 1) button that is pressed = value of genre
-
 //starts search will hide start screen and get genre prompt
 function startSearch() {
     startPageEl.addClass('hidden');
     genrePageEl.removeClass('hidden');
-}
+};
 
 // when a genre button is clicked that genre is assigned to the genre variable. Then the next prompt is shown.
 $('.genreBtn').on('click', function(){
-    genre = $(this).attr('id')
+    genre = $(this).attr('id');
     console.log(genre);
     genrePageEl.addClass('hidden');
     yearPageEl.removeClass('hidden');
-})
+});
 
 // when an era button is clicked that era value is assigned to the era variable. Then the next prompt is shown
 $('.eraBtn').on('click', function(){
     if ($(this).attr('id') === 'era-1'){
-        era = era1
+        era = era1;
     } else if ($(this).attr('id') ==='era-2'){
-        era = era2
+        era = era2;
     } else if ($(this).attr('id') ==='era-3'){
-        era = era3
+        era = era3;
     }
-    console.log(era)
+    console.log(era);
     yearPageEl.addClass('hidden');
     languagePageEl.removeClass('hidden');
+});
+
+$('.langBtn').on('click', function(){
+    language = $(this).attr('id');
+    console.log(language);
+    languagePageEl.addClass('hidden');
+    resultPageEl.removeClass('hidden');
 })
 
 // Event Listeners
@@ -110,3 +113,9 @@ bulmaCarousel.attach('#slider', {
     infinite: true,
     icons: { previous: "<span style='color:orange;font-weight:800'>&lt;</span>", next: "<span style='color:orange;font-weight:800'>&gt;</span>" }
 });
+
+// carousel is hidden
+function initLoad(){
+    resultPageEl.addClass('hidden')
+}
+initLoad();
