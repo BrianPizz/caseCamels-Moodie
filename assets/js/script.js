@@ -89,6 +89,9 @@ function searchMovie(){
         }
     }; 
     fetch(movieUrl, options)
+    .then(function (respose)) {
+        if ()
+    }
 
 
 
