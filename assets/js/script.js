@@ -93,7 +93,9 @@ function searchMovie(){
         if (Response.ok) {
             return Response.json();
         }
-    }
+    })
+    .then(function)
+
 
 
 
