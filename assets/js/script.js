@@ -100,6 +100,10 @@ function printMovieResults(movie){
         movieImage.attr('src', movie.imageurl[0]);
         cardImageContainer.append(movieImage);
 
+        movieSectionEl.append(movieResultCard);
+        var movieContent = $('<div>').addClass('card-content');
+        var movietitle = $('<div>').addClass('is-size-4').text(movie.title);
+        movieContent.append(movietitle);
 
     getDinner();
 }
