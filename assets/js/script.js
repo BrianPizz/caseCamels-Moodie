@@ -103,7 +103,8 @@ function getDinner(){
 
 function printDinner(dinner){
 //add dinner api data to document
-
+var dinnerLink = $('<a>').attr('href', dinner.display.source.sourceRecipeUrl);
+var dinnerCard = $('<div>').addClass('card mx-3');
 
 }
 
