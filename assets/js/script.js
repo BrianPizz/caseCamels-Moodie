@@ -8,7 +8,7 @@ var era2BtnEl = $('#era-2');
 var era3BtnEl = $('#era-3');
 var languagePageEl = $('#language-page');
 var resultPageEl = $('#results-page');
-var movieCarousel = $('#slider');
+var movieSectionEl = $('#movie-section');
 var dinnerSectionEl = $('#recipe-link');
 
 //function variables
