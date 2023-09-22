@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div id="starter-page" class="">
+    <div id="starter-page">
         <nav class="level">
             <h1 class="level-item is-size-1 title mt-3">Moodie</h1>
         </nav>
@@ -30,28 +30,28 @@
     <div id="genre-page" class="hidden">
         <section class="prompt-1">
             <h1 class="title is-size-1">What are you in the mood for?</h1>
-            <button id="action">Action</button>
-            <button id="adult">Adult</button>
-            <button id="adventure">Adventure</button>
-            <button id="animation">Animation</button>
-            <button id="biography">Biography</button>
-            <button id="comedy">Comedy</button>
-            <button id="crime">Crime</button>
-            <button id="documentary">Documentary</button>
-            <button id="drama">Drama</button>
-            <button id="family">Family</button>
-            <button id="fantasy">Fantasy</button>
-            <button id="history">History</button>
-            <button id="horror">Horror</button>
-            <button id="music">Music</button>
-            <button id="mystery">Mystery</button>
-            <button id="romance">Romance</button>
-            <button id="sci-fi">Sci-Fi</button>
-            <button id="short">Short</button>
-            <button id="sport">Sport</button>
-            <button id="thriller">Thriller</button>
-            <button id="war">War</button>
-            <button id="western">Western</button>
+            <button class="genreBtn" id="adult">Adult</button>
+            <button class="genreBtn" id="adventure">Adventure</button>
+            <button class="genreBtn" id="animation">Animation</button>
+            <button class="genreBtn" id="action">Action</button>
+            <button class="genreBtn" id="biography">Biography</button>
+            <button class="genreBtn" id="comedy">Comedy</button>
+            <button class="genreBtn" id="crime">Crime</button>
+            <button class="genreBtn" id="documentary">Documentary</button>
+            <button class="genreBtn" id="drama">Drama</button>
+            <button class="genreBtn" id="family">Family</button>
+            <button class="genreBtn" id="fantasy">Fantasy</button>
+            <button class="genreBtn" id="history">History</button>
+            <button class="genreBtn" id="horror">Horror</button>
+            <button class="genreBtn" id="music">Music</button>
+            <button class="genreBtn" id="mystery">Mystery</button>
+            <button class="genreBtn" id="romance">Romance</button>
+            <button class="genreBtn" id="sci-fi">Sci-Fi</button>
+            <button class="genreBtn" id="short">Short</button>
+            <button class="genreBtn" id="sport">Sport</button>
+            <button class="genreBtn" id="thriller">Thriller</button>
+            <button class="genreBtn" id="war">War</button>
+            <button class="genreBtn" id="western">Western</button>
         </section>
     </div>
 
@@ -71,16 +71,13 @@
                 </div>
                 <div class="dropdown-menu" id="dropdown-menu4" role="menu">
                     <div class="dropdown-content">
-                        <button class="button dropdown-item">
-                            1950-1970
-                        </button>
-                        <button class="button dropdown-item">
+                        <button id="era-1" class="eraBtn button dropdown-item">
                             1970-1990
                         </button>
-                        <button class="button dropdown-item">
+                        <button id="era-2" class="eraBtn button dropdown-item">
                             1990-2010
                         </button>
-                        <button class="button dropdown-item">
+                        <button id="era-3" class="eraBtn button dropdown-item">
                             2010-2023
                         </button>
                     </div>
@@ -94,31 +91,31 @@
             <h1 class="title is-size-1">What language should the movie be in?</h1>
             <div class="columns is-centered">
             <div class="column is-half mt-6">
-            <button class="button" id="english">English</button>
-            <button class="button" id="mandarin">Mandarin</button>
-            <button class="button" id="french">French</button>
-            <button class="button" id="japanese">Japanese</button>
-            <button class="button" id="spanish">Spanish</button>
-            <button class="button" id="korean">Korean</button>
-            <button class="button" id="german">German</button>
-            <button class="button" id="hindi">Hindi</button>
-            <button class="button" id="italian">Italian</button>
-            <button class="button" id="arabic">Arabic</button>
-            <button class="button" id="hebrew">Hebrew</button>
-            <button class="button" id="cantonese">Cantonese</button>
-            <button class="button" id="portuguese">Portuguese</button>
-            <button class="button" id="swedish">Swedish</button>
-            <button class="button" id="latin">Latin</button>
-            <button class="button" id="ukranian">Ukrainian</button>
-            <button class="button" id="danish">Danish</button>
-            <button class="button" id="persian">Persian</button>
+            <button class="button langBtn" id="english">English</button>
+            <button class="button langBtn" id="mandarin">Mandarin</button>
+            <button class="button langBtn" id="french">French</button>
+            <button class="button langBtn" id="japanese">Japanese</button>
+            <button class="button langBtn" id="spanish">Spanish</button>
+            <button class="button langBtn" id="korean">Korean</button>
+            <button class="button langBtn" id="german">German</button>
+            <button class="button langBtn" id="hindi">Hindi</button>
+            <button class="button langBtn" id="italian">Italian</button>
+            <button class="button langBtn" id="arabic">Arabic</button>
+            <button class="button langBtn" id="hebrew">Hebrew</button>
+            <button class="button langBtn" id="cantonese">Cantonese</button>
+            <button class="button langBtn" id="portuguese">Portuguese</button>
+            <button class="button langBtn" id="swedish">Swedish</button>
+            <button class="button langBtn" id="latin">Latin</button>
+            <button class="button langBtn" id="ukranian">Ukrainian</button>
+            <button class="button langBtn" id="danish">Danish</button>
+            <button class="button langBtn" id="persian">Persian</button>
         </div>
     </div>
         </section>
     </div>
 
 
-    <div id="results-page" class="hidden">
+    <div id="results-page">
         <nav class="level">
             <h1 class="level-item is-size-1 title mt-3">Moodie</h1>
         </nav>
@@ -126,7 +123,7 @@
             <div class="container">
                 <div class="columns is-multiline is-centered">
                     <div id="movie-section" class="column is-one-third is-clipped">
-                        <div id="slider">
+                        <div id="slider" class="carousel">
 
                             <div class="card mx-3">
                                 <div class="card-image">
@@ -174,6 +171,7 @@
                     <div class="column is-narrow"></div>
                     <div id="dinner-section" class="column is-one-third">
                         <a id="recipe-link" href="#">
+
                             <div class="card mx-3">
                                 <div class="card-image">
                                     <figure class="image">
@@ -188,6 +186,7 @@
                                     </p>
                                 </div>
                             </div>
+
                         </a>
                     </div>
                 </div>
