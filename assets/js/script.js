@@ -72,10 +72,19 @@ var baseUrl = "https:/theapi.com/search?";
 // when genre is pressed then genre variable is assigned value
 // if any button gets pressed in genre, addeventlistener (add on all buttons on prompt 1) button that is pressed = value of genre
 
+//starts search will hide start screen and get genre prompt
 function startSearch() {
-    startPageEl.addClass('hidden')
-    genrePageEl.removeClass('hidden')
+    startPageEl.addClass('hidden');
+    genrePageEl.removeClass('hidden');
 }
+
+// when a genre button is clicked that genre is assigned to the genre variable. Then the next prompt is shown.
+$('.genreBtn').on('click', function(){
+    genre = $(this).attr('id')
+    console.log(genre);
+    genrePageEl.addClass('hidden');
+    yearPageEl.removeClass('hidden');
+})
 
 // Event Listeners
 startBtnEl.on('click', startSearch)
