@@ -106,6 +106,17 @@ cuisine = 'cuban';
             'X-RapidAPI-Host': 'yummly2.p.rapidapi.com'
         }
     };
+    fetch(dinnerUrl, options)
+        .then(function (response) {
+            if (response.ok) {
+                return response.json();
+            }
+        })
+        .then(function (data) {
+            var randomDinner = data.feed[Math.floor(Math.random() * data.feed.length)]
+            console.log(randomDinner)
+            printDinner(randomDinner);
+        })
 
 
 
