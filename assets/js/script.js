@@ -107,6 +107,10 @@ var dinnerLink = $('<a>').attr('href', dinner.display.source.sourceRecipeUrl);
 var dinnerCard = $('<div>').addClass('card mx-3');
 var dinnerImgSection = $('<div>').addClass('card-image');
     dinnerCard.append(dinnerImgSection);
+var dinnerImageContainer = $('<figure>').addClass('image is-4by3');
+    dinnerImgSection.append(dinnerImageContainer);
+var dinnerImage = $('<img>');
+    dinnerImage.attr('src', dinner.display.images[0]);
 
 }
 
