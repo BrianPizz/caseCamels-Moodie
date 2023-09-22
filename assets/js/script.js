@@ -115,6 +115,10 @@ dinnerImageContainer.append(dinnerImage);
 var dinnerContent = $('<div>').addClass('card-content')
 var dinnerName = $('<h2>').addClass('is-size-3').text(dinner.display.displayName);
 dinnerContent.append(dinnerName);
+if(dinner.content.description != null){
+    var dinnerDesc = $('<p>').text(dinner.content.description.text);
+    dinnerContent.append(dinnerDesc);
+}
 
 }
 
