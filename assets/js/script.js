@@ -80,7 +80,14 @@ $('.langBtn').on('click', function(){
 })
 
 function searchMovie(){
-    // add API fetch for movie
+    var movieUrl = 'https://ott-details.p.rapidapi.com/advancedsearch?' + era + '&min_imdb=8&max_imdb=10&genre=' + genre + '&language=' + language + '&type=movie&page=1';
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '8ebca9f28cmsh2d3b9f9a6282943p1d53a7jsnf53b2b807ce4',
+            'X-RapidAPI-Host': 'ott-details.p.rapidapi.com'
+        }
+    };
 
 
 
