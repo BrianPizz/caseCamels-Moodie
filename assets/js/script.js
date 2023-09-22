@@ -89,7 +89,10 @@ function searchMovie(){
 
 function printMovieResults(movie){
     //add movie api call data to document
-
+    var movieResultCard = $('<div>').addClass('.card mx-3');
+        
+        var cardImageSection = $('<div>').addClass('card-image');
+        movieResultCard.append(cardImageSection);
 
 
     getDinner();
