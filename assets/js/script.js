@@ -167,7 +167,7 @@ function getDinner(){
     } else if(genre = ''){
         cuisine = ''
     }
-
+        
 // add API fetch for dinner
     var dinnerUrl = 'https://yummly2.p.rapidapi.com/feeds/list?limit=24&start=0&tag=list.recipe.search_based%3Afq%3Aattribute_s_mv%3A(cuisine%5C%5Ecuisine%5C-' + cuisine;
     const options = {
