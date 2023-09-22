@@ -145,28 +145,22 @@ function getDinner(){
     } else if(genre = 'romance'){
         cuisine = 'mediterranean'
     } else if(genre = 'short'){
-        cuisine = ''
-    } else if(genre = ''){
-        cuisine = ''
-    } else if(genre = ''){
-        cuisine = ''
-    } else if(genre = ''){
-        cuisine = ''
-    } else if(genre = ''){
-        cuisine = ''
-    } else if(genre = ''){
-        cuisine = ''
-    } else if(genre = ''){
-        cuisine = ''
-    } else if(genre = ''){
-        cuisine = ''
-    } else if(genre = ''){
-        cuisine = ''
-    } else if(genre = ''){
-        cuisine = ''
-    } else if(genre = ''){
-        cuisine = ''
-    }
+        cuisine = 'greek'
+    } else if(genre = 'thriller'){
+        cuisine = 'southwestern'
+    } else if(genre = 'animation'){
+        cuisine = 'japanese'
+    } else if(genre = 'crime'){
+        cuisine = 'mexican'
+    } else if(genre = 'drama'){
+        cuisine = 'thai'
+    } else if(genre = 'fantasy'){
+        cuisine = 'indian'
+    } else if(genre = 'mystery'){
+        cuisine = 'spanish'
+    } else if(genre = 'sci-fi'){
+        cuisine = 'cajun'
+ }
 
 // add API fetch for dinner
     var dinnerUrl = 'https://yummly2.p.rapidapi.com/feeds/list?limit=24&start=0&tag=list.recipe.search_based%3Afq%3Aattribute_s_mv%3A(cuisine%5C%5Ecuisine%5C-' + cuisine;
