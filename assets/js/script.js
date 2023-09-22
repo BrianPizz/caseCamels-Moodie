@@ -124,41 +124,41 @@ function printMovieResults(movie){
 
 function getDinner(){
 
-    if(genre = 'biography'){
+    if(genre === 'biography'){
         cuisine = 'german'
-    } else if(genre = 'adventure'){
+    } else if(genre === 'adventure'){
         cuisine = 'moroccan'
-    } else if(genre = 'horror'){
+    } else if(genre === 'horror'){
         cuisine = 'english'
-    } else if(genre = 'action'){
+    } else if(genre === 'action'){
         cuisine = 'american'
-    } else if(genre = 'comedy'){
+    } else if(genre === 'comedy'){
         cuisine = 'asian'
-    } else if(genre = 'documentary'){
+    } else if(genre === 'documentary'){
         cuisine = 'french'
-    } else if(genre = 'family'){
+    } else if(genre === 'family'){
         cuisine = 'italian'
-    } else if(genre = 'history'){
+    } else if(genre === 'history'){
         cuisine = 'chinese'
-    } else if(genre = 'music'){
+    } else if(genre === 'music'){
         cuisine = 'southern'
-    } else if(genre = 'romance'){
+    } else if(genre === 'romance'){
         cuisine = 'mediterranean'
-    } else if(genre = 'short'){
+    } else if(genre === 'short'){
         cuisine = 'greek'
-    } else if(genre = 'thriller'){
+    } else if(genre === 'thriller'){
         cuisine = 'southwestern'
-    } else if(genre = 'animation'){
+    } else if(genre === 'animation'){
         cuisine = 'japanese'
-    } else if(genre = 'crime'){
+    } else if(genre === 'crime'){
         cuisine = 'mexican'
-    } else if(genre = 'drama'){
+    } else if(genre === 'drama'){
         cuisine = 'thai'
-    } else if(genre = 'fantasy'){
+    } else if(genre === 'fantasy'){
         cuisine = 'indian'
-    } else if(genre = 'mystery'){
+    } else if(genre ==='mystery'){
         cuisine = 'spanish'
-    } else if(genre = 'sci-fi'){
+    } else if(genre === 'sci-fi'){
         cuisine = 'cajun'
  }
 
