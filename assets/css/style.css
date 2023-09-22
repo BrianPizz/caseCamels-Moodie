@@ -1,10 +1,19 @@
 /*starter page styles*/
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    background-color: black;
+}
 body{
     color: white;
     background-image: url('https://c4.wallpaperflare.com/wallpaper/307/12/896/simple-background-black-background-minimalism-theater-photography-hd-wallpaper-preview.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 105vh;
+    height: 100vh;
+    background-color: black;
+    background-position: center;
 }
 
 .subtitle {
