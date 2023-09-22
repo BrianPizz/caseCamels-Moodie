@@ -111,6 +111,10 @@ var dinnerImageContainer = $('<figure>').addClass('image is-4by3');
     dinnerImgSection.append(dinnerImageContainer);
 var dinnerImage = $('<img>');
     dinnerImage.attr('src', dinner.display.images[0]);
+dinnerImageContainer.append(dinnerImage);
+var dinnerContent = $('<div>').addClass('card-content')
+var dinnerName = $('<h2>').addClass('is-size-3').text(dinner.display.displayName);
+dinnerContent.append(dinnerName);
 
 }
 
