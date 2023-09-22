@@ -89,9 +89,29 @@ function searchMovie(){
 
 function printMovieResults(movie){
     //add movie api call data to document
+    var movieResultCard = $('<div>').addClass('.card mx-3');
+        
+        var cardImageSection = $('<div>').addClass('card-image');
+        movieResultCard.append(cardImageSection);
+        var cardImageContainer = $('<figure>').addClass('image is-4by3');
+        cardImageSection.append(cardImageContainer);
 
+        var movieImage = $('<img>');
+        movieImage.attr('src', movie.imageurl[0]);
+        cardImageContainer.append(movieImage);
 
+        movieSectionEl.append(movieResultCard);
+        var movieContent = $('<div>').addClass('card-content');
+        var movietitle = $('<div>').addClass('is-size-4').text(movie.title);
+        movieContent.append(movietitle);
 
+        var movieDate = $('<h3>').addClass('is-size-4').text(movie.released);
+        movieContent.append(movieDate)
+        var movieDescription = $('<p>').addClass('mb-3 is-italic').text(movie.synopsis);
+        movieContent.append(movieDescription);
+        movieSectionEl.append(movieContent);
+
+        
     getDinner();
 }
 
