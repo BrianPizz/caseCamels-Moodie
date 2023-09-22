@@ -117,6 +117,27 @@ function printMovieResults(movie){
 
 function getDinner(){
 // add API fetch for dinner
+cuisine = 'cuban';
+    var dinnerUrl = 'https://yummly2.p.rapidapi.com/feeds/list?limit=24&start=0&tag=list.recipe.search_based%3Afq%3Aattribute_s_mv%3A(cuisine%5C%5Ecuisine%5C-' + cuisine;
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'a2e2471a1bmshdff4df32a780728p1e3783jsn183b9f01f1f2',
+            'X-RapidAPI-Host': 'yummly2.p.rapidapi.com'
+        }
+    };
+    fetch(dinnerUrl, options)
+        .then(function (response) {
+            if (response.ok) {
+                return response.json();
+            }
+        })
+        .then(function (data) {
+            var randomDinner = data.feed[Math.floor(Math.random() * data.feed.length)]
+            console.log(randomDinner)
+            printDinner(randomDinner);
+        })
+
 
 
 }
