@@ -9,7 +9,7 @@ var era3BtnEl = $('#era-3');
 var languagePageEl = $('#language-page');
 var resultPageEl = $('#results-page');
 var movieSectionEl = $('#movie-section');
-var dinnerSectionEl = $('#recipe-link');
+var dinnerSectionEl = $('#dinner-section');
 
 //function variables
 var genre;
@@ -22,24 +22,11 @@ var genre = "";
 // https://yummly2.p.rapidapi.com/tags/list
 // https://ott-details.p.rapidapi.com/advancedsearch?min_imdb=8&max_imdb=10&type=movie&page=1
 
-// API SEARCH PARAMETERS
-// start year
-// end yearmin_imdb
-// max_imdb
-// genre
-// language
-// type
-// sort
-// page
-
 // API variables
 // start/end year variables
 var era1 = "start_year=1970&end_year=1990";
 var era2 = "start_year=1991&end_year=2010";
 var era3 = "start_year=2011&end_year=2023";
-
-var baseUrl = "https:/theapi.com/search?";
-
 
 //starts search will hide start screen and get genre prompt
 function startSearch() {
@@ -136,8 +123,52 @@ function printMovieResults(movie){
 }
 
 function getDinner(){
+
+    if(genre = ''){
+        cuisine = ''
+    } else if(genre = ''){
+        cuisine = ''
+    } else if(genre = ''){
+        cuisine = ''
+    } else if(genre = ''){
+        cuisine = ''
+    } else if(genre = ''){
+        cuisine = ''
+    } else if(genre = ''){
+        cuisine = ''
+    } else if(genre = ''){
+        cuisine = ''
+    } else if(genre = ''){
+        cuisine = ''
+    } else if(genre = ''){
+        cuisine = ''
+    } else if(genre = ''){
+        cuisine = ''
+    } else if(genre = ''){
+        cuisine = ''
+    } else if(genre = ''){
+        cuisine = ''
+    } else if(genre = ''){
+        cuisine = ''
+    } else if(genre = ''){
+        cuisine = ''
+    } else if(genre = ''){
+        cuisine = ''
+    } else if(genre = ''){
+        cuisine = ''
+    } else if(genre = ''){
+        cuisine = ''
+    } else if(genre = ''){
+        cuisine = ''
+    } else if(genre = ''){
+        cuisine = ''
+    } else if(genre = ''){
+        cuisine = ''
+    } else if(genre = ''){
+        cuisine = ''
+    }
+
 // add API fetch for dinner
-cuisine = 'cuban';
     var dinnerUrl = 'https://yummly2.p.rapidapi.com/feeds/list?limit=24&start=0&tag=list.recipe.search_based%3Afq%3Aattribute_s_mv%3A(cuisine%5C%5Ecuisine%5C-' + cuisine;
     const options = {
         method: 'GET',
