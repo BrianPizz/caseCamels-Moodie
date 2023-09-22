@@ -93,6 +93,12 @@ function printMovieResults(movie){
         
         var cardImageSection = $('<div>').addClass('card-image');
         movieResultCard.append(cardImageSection);
+        var cardImageContainer = $('<figure>').addClass('image is-4by3');
+        cardImageSection.append(cardImageContainer);
+
+        var movieImage = $('<img>');
+        movieImage.attr('src', movie.imageurl[0]);
+        cardImageContainer.append(movieImage);
 
 
     getDinner();
