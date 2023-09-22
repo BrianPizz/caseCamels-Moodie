@@ -105,6 +105,13 @@ function printMovieResults(movie){
         var movietitle = $('<div>').addClass('is-size-4').text(movie.title);
         movieContent.append(movietitle);
 
+        var movieDate = $('<h3>').addClass('is-size-4').text(movie.released);
+        movieContent.append(movieDate)
+        var movieDescription = $('<p>').addClass('mb-3 is-italic').text(movie.synopsis);
+        movieContent.append(movieDescription);
+        movieSectionEl.append(movieContent);
+
+        
     getDinner();
 }
 
