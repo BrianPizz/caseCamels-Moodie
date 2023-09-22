@@ -88,13 +88,18 @@ function searchMovie(){
             'X-RapidAPI-Host': 'ott-details.p.rapidapi.com'
         }
     }; 
+
     fetch(movieUrl, options)
-    .then(function (respose)) {
-        if (Response.ok) {
-            return Response.json();
-        }
+        .then(function (response) {
+            if (response.ok) {
+                return response.json();
+            }
+
     })
-    .then(function)
+    .then(function (data) {
+        var randomMovie = data.results[Math.floor(Math.random() * data.results.length)]
+        printMovieResults(randomMovie);
+    })
 
 
 
