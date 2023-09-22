@@ -90,7 +90,9 @@ function searchMovie(){
     }; 
     fetch(movieUrl, options)
     .then(function (respose)) {
-        if ()
+        if (Response.ok) {
+            return Response.json();
+        }
     }
 
 
