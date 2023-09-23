@@ -84,8 +84,18 @@ function searchMovie(){
 
     })
     .then(function (data) {
+        if (data.results.length === 0) {
+            resultPageEl.append($('<p>').addClass('is-size-4 has-text-centered').text("Sorry, no movies found!"))
+            return
+        }
         var randomMovie = data.results[Math.floor(Math.random() * data.results.length)]
-        printMovieResults(randomMovie);
+        if (randomMovie.imageurl.length > 0) {
+            printMovieResults(randomMovie);
+        } else {
+            var randomMovie = data.results[Math.floor(Math.random() * data.results.length)]
+        }
+
+
     })
 
 
