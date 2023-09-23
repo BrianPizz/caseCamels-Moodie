@@ -163,7 +163,7 @@ function getDinner(){
     } else if(genre === 'war'){
         cuisine = 'hawaiian'
     } else if(genre === 'sport'){
-        cuisine = 'barbecue'
+        cuisine = 'american'
     } else if (genre === 'western'){
         cuisine = 'american'
     };
