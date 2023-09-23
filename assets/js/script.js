@@ -183,7 +183,7 @@ function getDinner(){
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': 'a2e2471a1bmshdff4df32a780728p1e3783jsn183b9f01f1f2',
+            'X-RapidAPI-Key': '578deddfbbmsh96eac18ec970cb3p1ba1acjsneb1cb28fa899',
             'X-RapidAPI-Host': 'yummly2.p.rapidapi.com'
         }
     };
