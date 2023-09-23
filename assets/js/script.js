@@ -71,7 +71,7 @@ function searchMovie(){
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '8ebca9f28cmsh2d3b9f9a6282943p1d53a7jsnf53b2b807ce4',
+            'X-RapidAPI-Key': '5785bee15emshf94920a3813b013p19d4f8jsn16dcd17b2cc5',
             'X-RapidAPI-Host': 'ott-details.p.rapidapi.com'
         }
     }; 
