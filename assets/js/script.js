@@ -71,7 +71,7 @@ function searchMovie(){
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '8ebca9f28cmsh2d3b9f9a6282943p1d53a7jsnf53b2b807ce4',
+            'X-RapidAPI-Key': '5785bee15emshf94920a3813b013p19d4f8jsn16dcd17b2cc5',
             'X-RapidAPI-Host': 'ott-details.p.rapidapi.com'
         }
     }; 
@@ -84,8 +84,18 @@ function searchMovie(){
 
     })
     .then(function (data) {
+        if (data.results.length === 0) {
+            resultPageEl.append($('<p>').addClass('is-size-4 has-text-centered').text("Sorry, no movies found!"))
+            return
+        }
         var randomMovie = data.results[Math.floor(Math.random() * data.results.length)]
-        printMovieResults(randomMovie);
+        if (randomMovie.imageurl.length > 0) {
+            printMovieResults(randomMovie);
+        } else {
+            var randomMovie = data.results[Math.floor(Math.random() * data.results.length)]
+        }
+
+
     })
 
 
@@ -163,7 +173,7 @@ function getDinner(){
     } else if(genre === 'war'){
         cuisine = 'hawaiian'
     } else if(genre === 'sport'){
-        cuisine = 'barbecue'
+        cuisine = 'american'
     } else if (genre === 'western'){
         cuisine = 'american'
     };
@@ -173,7 +183,7 @@ function getDinner(){
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': 'a2e2471a1bmshdff4df32a780728p1e3783jsn183b9f01f1f2',
+            'X-RapidAPI-Key': '578deddfbbmsh96eac18ec970cb3p1ba1acjsneb1cb28fa899',
             'X-RapidAPI-Host': 'yummly2.p.rapidapi.com'
         }
     };
@@ -195,7 +205,14 @@ function getDinner(){
 
 function printDinner(dinner){
 //add dinner api data to document
-var dinnerLink = $('<a>').attr('href', dinner.display.source.sourceRecipeUrl);
+    var mealUrl
+if(dinner.seo.firebase.noindex){
+    mealUrl = dinner.display.source.sourceRecipeUrl
+} else {
+    mealUrl = dinner.seo.firebase.webUrl
+}
+
+var dinnerLink = $('<a>').attr('href', mealUrl).attr('target', '_blank');
     var dinnerCard = $('<div>').addClass('card mx-3');
     var dinnerImgSection = $('<div>').addClass('card-image');
     dinnerCard.append(dinnerImgSection);
