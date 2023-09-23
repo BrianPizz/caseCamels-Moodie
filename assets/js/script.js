@@ -205,7 +205,14 @@ function getDinner(){
 
 function printDinner(dinner){
 //add dinner api data to document
-var dinnerLink = $('<a>').attr('href', dinner.seo.firebase.webUrl).attr('target', '_blank');
+    var mealUrl
+if(dinner.seo.firebase.noindex){
+    mealUrl = dinner.display.source.sourceRecipeUrl
+} else {
+    mealUrl = dinner.seo.firebase.webUrl
+}
+
+var dinnerLink = $('<a>').attr('href', mealUrl).attr('target', '_blank');
     var dinnerCard = $('<div>').addClass('card mx-3');
     var dinnerImgSection = $('<div>').addClass('card-image');
     dinnerCard.append(dinnerImgSection);
