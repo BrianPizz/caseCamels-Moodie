@@ -12,7 +12,6 @@ var movieSectionEl = $('#movie-section');
 var dinnerSectionEl = $('#dinner-section');
 
 //function variables
-var genre;
 var era;
 var language;
 var cuisine = "";
@@ -71,7 +70,7 @@ function searchMovie(){
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '5785bee15emshf94920a3813b013p19d4f8jsn16dcd17b2cc5',
+            'X-RapidAPI-Key': '578deddfbbmsh96eac18ec970cb3p1ba1acjsneb1cb28fa899',
             'X-RapidAPI-Host': 'ott-details.p.rapidapi.com'
         }
     }; 
