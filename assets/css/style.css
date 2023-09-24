@@ -29,10 +29,12 @@ body{
     font-weight: 900;
     border-radius: 10px;
     width: 130px;
+    transition: all 0.5s
 }
 
 #start:hover {
     background-color: bisque;
+    width: 180px;
 }
 
 .custom-column {
@@ -80,6 +82,7 @@ body{
 }
 .dropdown-content{
     background: none;
+    text-align: center;
 }
 .prompt-2 {
     background-color: orange;
@@ -101,6 +104,7 @@ body{
     padding: 5px;
     border-color: black;
     color: black;
+    text-align: center;
 }
 
 /*genre page styles*/
