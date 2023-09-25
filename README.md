@@ -8,7 +8,7 @@ On the Moodie website, a movie and meal plan is generated for users to have a pe
 ![Screenshot 2023-09-25 at 2 46 11 PM (2)](https://github.com/BrianPizz/caseCamels-Moodie/assets/138056153/3af12d26-b712-49de-b7f4-02a90c52e40f)
 
 ## Deployment link
-
+https://brianpizz.github.io/caseCamels-Moodie/
 
 ## User Story
 
