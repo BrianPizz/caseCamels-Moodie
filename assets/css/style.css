@@ -146,7 +146,7 @@ body{
 .prompt-2 {
     background-color: orange;
     font-size: 25px;
-    padding: 5px;
+    padding: 5px !important;
     border-radius: 15px;
     width: 350px;
     font-weight: bolder;
@@ -165,7 +165,9 @@ body{
     color: black;
     text-align: center;
 }
-
+button.dropdown-item {
+    padding: 0px !important;
+}
 /*genre page styles*/
 .prompt-1 button {
     background-color: orange;
@@ -233,4 +235,8 @@ body{
     box-shadow: inset 0px 0px 25px orange, 0 0 25px orange;
     background-color: bisque;
     width: 190px;
+}
+
+#results {
+    margin-top: 20px;
 }
