@@ -226,7 +226,7 @@ function printDinner(dinner) {
     // only display description if there is one
     if (dinner.content.description != null) {
         var dinnerDesc = $('<p>').text(dinner.content.description.text);
-        innerContent.append(dinnerDesc);
+        dinnerContent.append(dinnerDesc);
     }
     // add card to document
     dinnerCard.append(dinnerContent);
@@ -256,6 +256,7 @@ function initLoad() {
         var results = $('<h2>').text("   " + localStorage.getItem("dinner") + " and " + localStorage.getItem("movie"));
         result.append(results);
         result.removeClass('hidden')
+        $('.results').removeClass('hidden')
     }
 }
 initLoad();
