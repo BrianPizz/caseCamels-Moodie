@@ -10,7 +10,6 @@ var languagePageEl = $('#language-page');
 var resultPageEl = $('#results-page');
 var movieSectionEl = $('#movie-section');
 var dinnerSectionEl = $('#dinner-section');
-
 //function variables
 var genre;
 var era;
@@ -232,8 +231,6 @@ var dinnerLink = $('<a>').attr('href', mealUrl).attr('target', '_blank');
     dinnerLink.append(dinnerCard);
     dinnerSectionEl.append(dinnerLink)
 }
-
-
 
 // Event Listeners
 startBtnEl.on('click', startSearch)
