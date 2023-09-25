@@ -12,7 +12,6 @@ var movieSectionEl = $('#movie-section');
 var dinnerSectionEl = $('#dinner-section');
 
 //function variables
-var genre;
 var era;
 var language;
 var cuisine = "";
@@ -71,7 +70,7 @@ function searchMovie(){
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '8ebca9f28cmsh2d3b9f9a6282943p1d53a7jsnf53b2b807ce4',
+            'X-RapidAPI-Key': '578deddfbbmsh96eac18ec970cb3p1ba1acjsneb1cb28fa899',
             'X-RapidAPI-Host': 'ott-details.p.rapidapi.com'
         }
     }; 
@@ -84,8 +83,18 @@ function searchMovie(){
 
     })
     .then(function (data) {
+        if (data.results.length === 0) {
+            resultPageEl.append($('<p>').addClass('is-size-4 has-text-centered').text("Sorry, no movies found!"))
+            return
+        }
         var randomMovie = data.results[Math.floor(Math.random() * data.results.length)]
-        printMovieResults(randomMovie);
+        if (randomMovie.imageurl.length > 0) {
+            printMovieResults(randomMovie);
+        } else {
+            var randomMovie = data.results[Math.floor(Math.random() * data.results.length)]
+        }
+
+
     })
 
 
@@ -118,7 +127,8 @@ function printMovieResults(movie){
         movieContent.append(movieDescription);
         movieSectionEl.append(movieContent);
 
-        
+        localStorage.setItem("movie", movie.title); // local storage for movie
+
     getDinner();
 }
 
@@ -160,14 +170,20 @@ function getDinner(){
         cuisine = 'spanish'
     } else if(genre === 'sci-fi'){
         cuisine = 'cajun'
- }
+    } else if(genre === 'war'){
+        cuisine = 'hawaiian'
+    } else if(genre === 'sport'){
+        cuisine = 'american'
+    } else if (genre === 'western'){
+        cuisine = 'american'
+    };
 
 // add API fetch for dinner
     var dinnerUrl = 'https://yummly2.p.rapidapi.com/feeds/list?limit=24&start=0&tag=list.recipe.search_based%3Afq%3Aattribute_s_mv%3A(cuisine%5C%5Ecuisine%5C-' + cuisine;
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': 'a2e2471a1bmshdff4df32a780728p1e3783jsn183b9f01f1f2',
+            'X-RapidAPI-Key': '578deddfbbmsh96eac18ec970cb3p1ba1acjsneb1cb28fa899',
             'X-RapidAPI-Host': 'yummly2.p.rapidapi.com'
         }
     };
@@ -189,7 +205,14 @@ function getDinner(){
 
 function printDinner(dinner){
 //add dinner api data to document
-var dinnerLink = $('<a>').attr('href', dinner.display.source.sourceRecipeUrl);
+    var mealUrl
+if(dinner.seo.firebase.noindex){
+    mealUrl = dinner.display.source.sourceRecipeUrl
+} else {
+    mealUrl = dinner.seo.firebase.webUrl
+}
+
+var dinnerLink = $('<a>').attr('href', mealUrl).attr('target', '_blank');
     var dinnerCard = $('<div>').addClass('card mx-3');
     var dinnerImgSection = $('<div>').addClass('card-image');
     dinnerCard.append(dinnerImgSection);
@@ -201,6 +224,7 @@ var dinnerLink = $('<a>').attr('href', dinner.display.source.sourceRecipeUrl);
     var dinnerContent = $('<div>').addClass('card-content')
     var dinnerName = $('<h2>').addClass('is-size-3').text(dinner.display.displayName);
     dinnerContent.append(dinnerName);
+
     if(dinner.content.description != null){
         var dinnerDesc = $('<p>').text(dinner.content.description.text);
         dinnerContent.append(dinnerDesc);
@@ -208,6 +232,7 @@ var dinnerLink = $('<a>').attr('href', dinner.display.source.sourceRecipeUrl);
     dinnerCard.append(dinnerContent);
     dinnerLink.append(dinnerCard);
     dinnerSectionEl.append(dinnerLink)
+    localStorage.setItem("dinner", dinner.display.displayName); // local storage for dinner
 }
 
 
@@ -222,5 +247,11 @@ $('#back-btn').on('click', function(){
 // intial load
 function initLoad(){
     resultPageEl.addClass('hidden')
+
+      // Retreive the saved dinner from local storage and set up `h2` to hold result content
+    var result = $("#results");
+    var results = $('<h2>').text("   " + localStorage.getItem("dinner") + " and " + localStorage.getItem("movie"));
+    result.append(results); 
 }
 initLoad();
+
