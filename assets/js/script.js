@@ -247,8 +247,16 @@ function initLoad(){
 
       // Retreive the saved dinner from local storage and set up `h2` to hold result content
     var result = $("#results");
-    var results = $('<h2>').text("   " + localStorage.getItem("dinner") + " and " + localStorage.getItem("movie"));
-    result.append(results); 
+    if (localStorage.getItem("dinner") === null || localStorage.getItem("movie") === null) {
+       result.addClass('hidden')
+        return
+    }
+    else {
+        var results = $('<h2>').text("   " + localStorage.getItem("dinner") + " and " + localStorage.getItem("movie"));
+        result.append(results); 
+        result.removeClass('hidden')
+    }
+    
 }
 initLoad();
 
