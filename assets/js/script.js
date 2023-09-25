@@ -70,7 +70,7 @@ function searchMovie() {
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '578deddfbbmsh96eac18ec970cb3p1ba1acjsneb1cb28fa899',
+            'X-RapidAPI-Key': '570b2ba17b7msh26f24f9b4da9e51p14fefejsn35d44e5304df',
             'X-RapidAPI-Host': 'ott-details.p.rapidapi.com'
         }
     };
@@ -179,7 +179,7 @@ function getDinner() {
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '578deddfbbmsh96eac18ec970cb3p1ba1acjsneb1cb28fa899',
+            'X-RapidAPI-Key': '70b2ba17b7msh26f24f9b4da9e51p14fefejsn35d44e5304df',
             'X-RapidAPI-Host': 'yummly2.p.rapidapi.com'
         }
     };
