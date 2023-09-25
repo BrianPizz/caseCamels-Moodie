@@ -29,10 +29,38 @@ body{
     font-weight: 900;
     border-radius: 10px;
     width: 130px;
+    transition: all 0.7s;
+    animation: slideUp .6s ease forwards 1.7s;
+    transform: translateY(500px);
 }
+@keyframes wiggle {
+    0%, 7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-15deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    25% {
+      transform: rotateZ(-10deg);
+    }
+    30% {
+      transform: rotateZ(6deg);
+    }
+    35% {
+      transform: rotateZ(-4deg);
+    }
+    40%, 100% {
+      transform: rotateZ(0);
+    }
+  }
 
 #start:hover {
     background-color: bisque;
+    width: 190px;
+    box-shadow: inset 0px 0px 25px orange, 0 0 25px orange;
 }
 
 .custom-column {
@@ -43,7 +71,6 @@ body{
     display: none;
 }
 
-
 /*genre page styles*/
 .prompt-1 button {
     background-color: orange;
@@ -51,7 +78,7 @@ body{
     padding: 5px;
     border-radius: 15px;
     width: 350px;
-    font-weight:bolder
+    font-weight:bolder;
 }
 .prompt-1 button:hover {
     box-shadow: inset 0px 0px 25px orange, 0 0 25px orange;
@@ -68,6 +95,40 @@ body{
     font-weight: bolder;
 }
 
+/*animation styles*/
+.page1 h1 {
+    animation: slideIn .6s ease forwards .5s;
+    transform: translateY(-800px);
+}
+.page1 p {
+    animation: slideIn .6s ease forwards 1.1s;
+    transform: translateY(500px);
+}
+@keyframes slideIn {
+    0% {
+        transform: translateX(500px) scale(.2);
+      }
+      100% {
+        transform: translateX(0px) scale(1);
+      }
+}
+@keyframes slideUp {
+    0% {
+      transform: translateY(300px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+.page2, .prompt-era, .lang-page, .end-page {
+    animation: grow 0.7s;
+}
+
+@keyframes grow {
+    0% { transform: scale(.2); }
+	100% { transform: scale(1); }
+}
 /*era page styles*/
 .hide {
     display: none;
@@ -80,6 +141,7 @@ body{
 }
 .dropdown-content{
     background: none;
+    text-align: center;
 }
 .prompt-2 {
     background-color: orange;
@@ -101,6 +163,7 @@ body{
     padding: 5px;
     border-color: black;
     color: black;
+    text-align: center;
 }
 button.dropdown-item {
     padding: 0px !important;
@@ -114,10 +177,11 @@ button.dropdown-item {
     width: 350px;
     font-weight:bolder
 }
-.prompt-1 p:hover {
+.prompt-1 button:hover {
     box-shadow: inset 0px 0px 25px orange, 0 0 25px orange;
+    background-color: bisque;
 }
-.prompt-1 p:active {
+.prompt-1 button:active {
     background-color: bisque;
 }
 .prompt-1 {
@@ -138,10 +202,11 @@ button.dropdown-item {
     width: 350px;
     font-weight:bolder
 }
-.prompt-3 p:hover {
+.prompt-3 button:hover {
     box-shadow: inset 0px 0px 25px orange, 0 0 25px orange;
+    background-color: bisque;
 }
-.prompt-3 p:active {
+.prompt-3 button:active {
     background-color: bisque;
 }
 .prompt-3 {
@@ -163,10 +228,13 @@ button.dropdown-item {
     position: relative;
     display: flex;
     margin: auto;
+    transition: all 0.7s;
+    animation: wiggle 1.5s linear infinite; 
 }
 #back-btn:hover {
     box-shadow: inset 0px 0px 25px orange, 0 0 25px orange;
     background-color: bisque;
+    width: 190px;
 }
 
 #results {
