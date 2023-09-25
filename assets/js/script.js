@@ -10,7 +10,6 @@ var languagePageEl = $('#language-page');
 var resultPageEl = $('#results-page');
 var movieSectionEl = $('#movie-section');
 var dinnerSectionEl = $('#dinner-section');
-
 //function variables
 var era;
 var language;
@@ -234,8 +233,6 @@ var dinnerLink = $('<a>').attr('href', mealUrl).attr('target', '_blank');
     dinnerSectionEl.append(dinnerLink)
     localStorage.setItem("dinner", dinner.display.displayName); // local storage for dinner
 }
-
-
 
 // Event Listeners
 startBtnEl.on('click', startSearch)
