@@ -248,15 +248,10 @@ $('#back-btn').on('click', function(){
 function initLoad(){
     resultPageEl.addClass('hidden')
 
-      // // Retreive the saved dinner from local storage
-        var result = $("#results");
-      // // Put the appended dinnerName in local storage, and then append it to the page
-      // // Set up `div` to hold dinner result content
-      var dinnerName = $('<h2>').text("  and  " + localStorage.getItem("dinner"));
-    //   result.append(dinnerName); 
-
-      var movieResult = $('<h2>').text(localStorage.getItem("movie") + "  ");
-      result.append(movieResult, dinnerName); 
+      // Retreive the saved dinner from local storage and set up `h2` to hold result content
+    var result = $("#results");
+    var results = $('<h2>').text("   " + localStorage.getItem("dinner") + " and " + localStorage.getItem("movie"));
+    result.append(results); 
 }
 initLoad();
 
