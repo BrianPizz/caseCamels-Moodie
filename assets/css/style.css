@@ -30,9 +30,10 @@ body{
     border-radius: 10px;
     width: 130px;
     transition: all 0.7s;
-    animation: wiggle 2s linear infinite;
+    animation: slideUp .6s ease forwards 1.7s;
+    transform: translateY(500px);
 }
-@keyframes wiggle {
+/* @keyframes wiggle {
     0%, 7% {
       transform: rotateZ(0);
     }
@@ -54,12 +55,13 @@ body{
     40%, 100% {
       transform: rotateZ(0);
     }
-  }
+  } */
 
 #start:hover {
     background-color: bisque;
     width: 190px;
     box-shadow: inset 0px 0px 25px orange, 0 0 25px orange;
+    /* animation: wiggle 1.5s linear infinite;  */
 }
 
 .custom-column {
@@ -94,6 +96,40 @@ body{
     font-weight: bolder;
 }
 
+/*animation styles*/
+.page1 h1 {
+    animation: slideIn .6s ease forwards .5s;
+    transform: translateY(-800px);
+}
+.page1 p {
+    animation: slideIn .6s ease forwards 1.1s;
+    transform: translateY(500px);
+}
+@keyframes slideIn {
+    0% {
+        transform: translateX(500px) scale(.2);
+      }
+      100% {
+        transform: translateX(0px) scale(1);
+      }
+}
+@keyframes slideUp {
+    0% {
+      transform: translateY(300px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+.page2, .prompt-era, .lang-page, .end-page {
+    animation: grow 0.7s;
+}
+
+@keyframes grow {
+    0% { transform: scale(.2); }
+	100% { transform: scale(1); }
+}
 /*era page styles*/
 .hide {
     display: none;
