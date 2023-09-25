@@ -127,7 +127,8 @@ function printMovieResults(movie){
         movieContent.append(movieDescription);
         movieSectionEl.append(movieContent);
 
-        
+        localStorage.setItem("movie", movie.title); // local storage for movie
+
     getDinner();
 }
 
@@ -223,6 +224,7 @@ var dinnerLink = $('<a>').attr('href', mealUrl).attr('target', '_blank');
     var dinnerContent = $('<div>').addClass('card-content')
     var dinnerName = $('<h2>').addClass('is-size-3').text(dinner.display.displayName);
     dinnerContent.append(dinnerName);
+
     if(dinner.content.description != null){
         var dinnerDesc = $('<p>').text(dinner.content.description.text);
         dinnerContent.append(dinnerDesc);
@@ -230,6 +232,7 @@ var dinnerLink = $('<a>').attr('href', mealUrl).attr('target', '_blank');
     dinnerCard.append(dinnerContent);
     dinnerLink.append(dinnerCard);
     dinnerSectionEl.append(dinnerLink)
+    localStorage.setItem("dinner", dinner.display.displayName); // local storage for dinner
 }
 
 
@@ -244,5 +247,11 @@ $('#back-btn').on('click', function(){
 // intial load
 function initLoad(){
     resultPageEl.addClass('hidden')
+
+      // Retreive the saved dinner from local storage and set up `h2` to hold result content
+    var result = $("#results");
+    var results = $('<h2>').text("   " + localStorage.getItem("dinner") + " and " + localStorage.getItem("movie"));
+    result.append(results); 
 }
 initLoad();
+
